@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class StringBufferHandling {
+    public static void main(String[] args) {
+        StringBuffer sb1 = new StringBuffer();
+        System.out.println("Capacity: " + sb1.capacity());
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        StringBuffer reversed = new StringBuffer(input).reverse();
+        System.out.println("Reversed: " + reversed.toString().toUpperCase());
+
+        System.out.print("Enter a string to append: ");
+        String append = scanner.nextLine();
+        reversed.append(append);
+        System.out.println("After append: " + reversed);
+        scanner.close();
+    }
+}
