@@ -1,0 +1,13 @@
+public class Enumeration {
+    public enum DayOfWeek {
+        SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY;
+        public boolean isWorkday() {
+            return this != SUNDAY && this != SATURDAY;
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Is Monday workday? " + DayOfWeek.MONDAY.isWorkday());
+        System.out.println("Is Sunday workday? " + DayOfWeek.SUNDAY.isWorkday());
+    }
+}
