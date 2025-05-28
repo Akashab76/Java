@@ -1,0 +1,21 @@
+public class String_Functions {
+    public static boolean compareStrings(String str1, String str2) {
+        return str1.equals(str2);
+    }
+
+    public static String copyString(String original) {
+        return new String(original);
+    }
+
+    public static String concatenateStrings(String str1, String str2) {
+        return str1 + str2;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Are the strings equal? " + compareStrings("Hello", "hello"));
+        String copied = copyString("Copy me!");
+        System.out.println("Copied string: " + copied);
+        String concatenated = concatenateStrings("Hello, ", "world!");
+        System.out.println("Concatenated string: " + concatenated);
+    }
+}
