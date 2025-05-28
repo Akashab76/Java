@@ -1,0 +1,36 @@
+import java.util.Vector;
+
+class Product {
+    String name;
+    double price;
+    String category;
+    public Product(String name, double price, String category) {
+        this.name = name; this.price = price; this.category = category;
+    }
+}
+
+public class OnlineShoppingManager {
+    private Vector<Product> inventory = new Vector<>();
+
+    public void addProduct(String name, double price, String category) {
+        inventory.add(new Product(name, price, category));
+    }
+
+    public void removeProduct(String name) {
+        inventory.removeIf(p -> p.name.equalsIgnoreCase(name));
+    }
+
+    public void displayInventory() {
+        for (Product p : inventory)
+            System.out.println(p.name + " | " + p.price + " | " + p.category);
+    }
+
+    public static void main(String[] args) {
+        OnlineShoppingManager m = new OnlineShoppingManager();
+        m.addProduct("Laptop", 40000, "Electronics");
+        m.addProduct("Book", 900, "Education");
+        m.displayInventory();
+        m.removeProduct("Book");
+        m.displayInventory();
+    }
+}
