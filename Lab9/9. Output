@@ -1,1 +1,14 @@
+Fixed Length Stack:
+Pop: 30
+Pop: 20
+Is Empty: false
+Pop: 10
+Is Empty: true
+
+Dynamic Length Stack:
+Pop: 30
+Pop: 20
+Is Empty: false
+Pop: 10
+Is Empty: true
 
